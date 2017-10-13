@@ -14,6 +14,11 @@ truffle compile
 truffle migrate
 ```
 
+### console
+```
+truffle console
+```
+
 ### テスト
 ```
 truffle test
