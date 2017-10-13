@@ -1,25 +1,26 @@
 # okashi-kingdom
 お菓子王国
 
-## 開発
-[truffle](https://github.com/trufflesuite/truffle)を使います。
+## Development
+* [geth(Go Ethereum)](https://geth.ethereum.org/)
+* [truffle](https://github.com/trufflesuite/truffle)
 
-### コンパイル
+### Compile
 ```
 truffle compile
 ```
 
-### 実行
+### Migrate
 ```
 truffle migrate
 ```
 
-### console
+### Console
 ```
 truffle console
 ```
 
-### テスト
+### Test
 ```
 truffle test
 ```
