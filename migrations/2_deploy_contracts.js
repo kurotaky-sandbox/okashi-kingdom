@@ -1,8 +1,9 @@
-var ConvertLib = artifacts.require("./ConvertLib.sol");
-var MetaCoin = artifacts.require("./MetaCoin.sol");
+var OkashiKingdomCoin = artifacts.require("./OkashiKingdomCoin.sol");
+var Members = artifacts.require("./Members.sol");
+var Owned = artifacts.require("./Owned.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(ConvertLib);
-  deployer.link(ConvertLib, MetaCoin);
-  deployer.deploy(MetaCoin);
+  deployer.deploy(Owned);
+  deployer.deploy(Members);
+  deployer.deploy(OkashiKingdomCoin);
 };

@@ -1,0 +1,11 @@
+{
+  "name": "okashi-kingdom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:kurotaky-sandbox/okashi-kingdom.git",
+  "author": "Yuta Kurotaki <yuta.kurotaki@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "solc": "^0.4.17"
+  }
+}
