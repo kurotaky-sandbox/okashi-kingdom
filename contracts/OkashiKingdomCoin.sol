@@ -39,7 +39,7 @@ contract OkashiKingdomCoin is Owned {
     Unblacklisted(_address);
   }
 
-  function setMembrers(Members _members) public {
+  function setMembers(Members _members) public {
     members[msg.sender] = Members(_members);
   }
 
@@ -67,5 +67,31 @@ contract OkashiKingdomCoin is Owned {
 
     Transfered(msg.sender, _to, _value);
     Cashbacked(msg.sender, _to, cashback);
+  }
+
+  function transferFrom(address _from, address _to, uint256 _value) public {
+    if (balanceOf[_from] < _value) revert();
+    if (balanceOf[_to] + _value < balanceOf[_to]) revert();
+
+    if (blacklist[_from] > 0) {
+      RejectedTransferFromBlacklistedAccount(_from, _to, _value);
+      return;
+    } else if (blacklist[_to] > 0) {
+      RejectedTransferToBlacklistedAccount(_from, _to, _value);
+      return;
+    }
+
+    uint256 cashback = 0;
+
+    if (members[_to] > address(0)) {
+      cashback = _value / 100 * uint256(members[_to].getCashbackRate(_from));
+      members[_to].updateHistory(_from, _value);
+    }
+
+    balanceOf[_from] -= (_value - cashback);
+    balanceOf[_to] += (_value - cashback);
+
+    Transfered(_from, _to, _value);
+    Cashbacked(_from, _to, cashback);
   }
 }
