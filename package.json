@@ -6,6 +6,6 @@
   "author": "Yuta Kurotaki <yuta.kurotaki@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "solc": "^0.4.17"
+    "truffle": "^3.4.11"
   }
 }
