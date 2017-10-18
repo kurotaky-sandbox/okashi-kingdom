@@ -5,22 +5,27 @@
 * [geth(Go Ethereum)](https://geth.ethereum.org/)
 * [truffle](https://github.com/trufflesuite/truffle)
 
+### Setup
+```
+yarn
+```
+
 ### Compile
 ```
-truffle compile
+yarn truffle compile
 ```
 
 ### Migrate
 ```
-truffle migrate
+yarn truffle migrate
 ```
 
 ### Console
 ```
-truffle console
+yarn truffle console
 ```
 
 ### Test
 ```
-truffle test
+yarn truffle test
 ```
