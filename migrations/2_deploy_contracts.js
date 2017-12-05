@@ -1,9 +1,6 @@
-var OkashiKingdomCoin = artifacts.require("./OkashiKingdomCoin.sol");
-var Members = artifacts.require("./Members.sol");
-var Owned = artifacts.require("./Owned.sol");
+var OkashiKingdomToken = artifacts.require("./OkashiKingdomToken.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Owned);
-  deployer.deploy(Members);
-  deployer.deploy(OkashiKingdomCoin);
+  let initialSupply = 50000e18
+  deployer.deploy(OkashiKingdomToken, initialSupply);
 };

@@ -6,6 +6,7 @@
   "author": "Yuta Kurotaki <yuta.kurotaki@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "truffle": "^3.4.11"
+    "truffle": "^3.4.11",
+    "zeppelin-solidity": "^1.4.0"
   }
 }
