@@ -6,7 +6,9 @@
   "author": "Yuta Kurotaki <yuta.kurotaki@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "truffle": "^3.4.11",
+    "ethereumjs-testrpc": "^6.0.3",
+    "truffle": "^4.0.1",
+    "truffle-hdwallet-provider": "0.0.3",
     "zeppelin-solidity": "^1.4.0"
   }
 }
